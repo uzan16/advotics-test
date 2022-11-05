@@ -1,10 +1,18 @@
 <template>
-  <vue-apex-charts
-    width="100%"
-    type="bar"
-    :options="options"
-    :series="series"
-  ></vue-apex-charts>
+  <div>
+    <vue-apex-charts
+      width="100%"
+      type="bar"
+      :options="options"
+      :series="series"
+    />
+    <div class="d-flex flex-row px-4">
+      <span class='dot net wide mr-4'> Nett </span>
+      <span class='dot gross wide mr-4'> Gross </span>
+      <span class='dot apv wide mr-4'> Average Purchase Value </span>
+      <span class='dot upt wide mr-4'> Unit per Transaction </span>
+    </div>
+  </div>
 </template>
 <script>
 import VueApexCharts from "vue-apexcharts";
@@ -106,7 +114,7 @@ export default {
           <table>
             <tr>
               <td>
-                <span class='dot gross mr-4' /> Gross</span>
+                <span class='dot gross mr-4'> Gross</span>
               </td>
               <td>
                 ${this.$helper.formatNumber(obj.gross)}
@@ -114,7 +122,7 @@ export default {
             </tr>
             <tr>
               <td>
-                <span class='dot net mr-4' /> Nett</span>
+                <span class='dot net mr-4'> Nett</span>
               </td>
               <td>
                 ${this.$helper.formatNumber(obj.net)}
@@ -122,7 +130,7 @@ export default {
             </tr>
             <tr>
               <td>
-                <span class='dot apv mr-4' /> APV</span>
+                <span class='dot apv mr-4'> APV</span>
               </td>
               <td>
                 ${this.$helper.formatNumber(obj.apv)}
@@ -130,7 +138,7 @@ export default {
             </tr>
             <tr>
               <td>
-                <span class='dot upt mr-4' /> UPT</span>
+                <span class='dot upt mr-4'> UPT</span>
               </td>
               <td>
                 ${this.$helper.formatNumber(obj.upt)}
@@ -151,6 +159,10 @@ export default {
   border-radius: 50%;
   display: inline-block;
   margin-right: 4px;
+}
+.dot.wide:before {
+  width: 20px;
+  border-radius: 4px;
 }
 .dot.gross:before {
   background-color: #289e45;
