@@ -1,0 +1,86 @@
+$font-family:'Source Sans Pro';
+
+.v-application {
+    [class*='text-'] {
+      font-family: $font-family, sans-serif !important;
+    }
+    font-family: $font-family, sans-serif !important;
+  }
+
+.ad-appbar {
+    .topbar-logo {
+        width: 128px;
+    }
+    .topbar-logo.sm {
+        width: 72px;
+    }
+    .topbar-sub {
+        font-size: 11px;
+        color: #5B5B5B;
+    }
+    .text-username {
+        color: #727272;
+    }
+}
+
+.ad-drawer {
+    .nav-icon-wrapper {
+        border-radius: 4px;
+    }
+    .nav-icon {
+        width: 17px;
+        height: 17px;
+    }
+    .v-list-item__icon {
+        margin-right: 16px !important;
+    }
+    .v-list-item.is-selected {
+        background-color: #D2D2D2;
+    }
+}
+
+.v-main {
+    background-color: #F7F7F7;
+}
+
+.content-wrapper {
+    .page-title {
+        color: #707070C4;
+        font-size: 2.5em;
+        font-weight: 600;
+    }
+    .transparent {
+        background-color: transparent !important;
+    }
+    
+    .v-expansion-panel-content.panel-content .v-expansion-panel-content__wrap {
+        padding: 16px 0 16px 0;
+    }
+}
+
+.date-range-picker {
+    .date-activator {
+        text-transform: none;
+        background-color: #fff !important;
+    }
+    .date-activator.v-btn--outlined {
+        border-color: #D7DAE2 !important;
+    }
+    .template-wrapper {
+        min-width: 12em;
+
+        .v-list-item:not(:last-child) {
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+            border-bottom-color: #D7DAE2;
+        }
+        .v-list-item.selected {
+            color: #00A551 !important;
+            font-weight: bold;
+        }
+    }
+    .v-date-picker-table .v-btn.v-btn--active {
+        color: #00A551;
+        font-weight: bold;
+    }
+}
