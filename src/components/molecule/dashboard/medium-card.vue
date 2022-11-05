@@ -9,13 +9,27 @@
       <v-btn icon small plain :ripple="false">
         <v-icon>mdi-dots-vertical</v-icon>
       </v-btn>
+      <v-progress-linear
+        :active="loading"
+        :indeterminate="loading"
+        color="secondary"
+      />
     </v-card-title>
     <v-card-text class="px-3 pb-4 pt-2">
       <slot />
     </v-card-text>
   </v-card>
 </template>
-
+<script>
+export default {
+  name: "DashboardMediumCard",
+  props: {
+    loading: {
+      default: false
+    }
+  }
+};
+</script>
 <style scoped>
 .title {
   text-transform: uppercase;

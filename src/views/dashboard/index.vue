@@ -32,7 +32,7 @@
         <v-expansion-panel-content class="transparent no-padding panel-content">
           <v-row>
             <v-col cols="8" sm="6" md="4" lg="3" xl="2">
-              <small-card>
+              <small-card :loading="isLoading">
                 <template v-slot:title> Sales Turnover </template>
                 <div class="d-flex flex-row align-center">
                   <div class="d-flex flex-column">
@@ -78,7 +78,7 @@
           </v-row>
           <v-row>
             <v-col cols="12" md="6" xl="8">
-              <medium-card>
+              <medium-card :loading="isLoading">
                 <template v-slot:title> Average Purchase Value </template>
                 <template v-slot:sub-title>
                   <date-range-picker
@@ -93,13 +93,13 @@
               </medium-card>
             </v-col>
             <v-col cols="12" sm="6" md="3" xl="2">
-              <medium-card>
+              <medium-card :loading="isLoading">
                 <template v-slot:title> Best Selling SKU </template>
                 <sku-list :data="bestSelling" />
               </medium-card>
             </v-col>
             <v-col cols="12" sm="6" md="3" xl="2">
-              <medium-card>
+              <medium-card :loading="isLoading">
                 <template v-slot:title> Top Competitor SKU </template>
                 <sku-list :data="competitorSelling" />
               </medium-card>
@@ -175,13 +175,13 @@ export default {
     getData: async function () {
       this.isLoading = true;
       try {
-        await Promise.all[
-          (this.getBestSelling(),
+        await Promise.all([
+          this.getBestSelling(),
           this.getCompetitorSelling(),
           this.getGraph(),
           this.getSmallCardData(),
-          this.$helper.sleep(1000))
-        ];
+          this.$helper.sleep(1000)
+        ]);
       } catch (e) {
         // TODO: handle error
       } finally {
