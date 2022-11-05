@@ -7,10 +7,10 @@
       :series="series"
     />
     <div class="d-flex flex-row px-4">
-      <span class='dot net wide mr-4'> Nett </span>
-      <span class='dot gross wide mr-4'> Gross </span>
-      <span class='dot apv wide mr-4'> Average Purchase Value </span>
-      <span class='dot upt wide mr-4'> Unit per Transaction </span>
+      <span class="dot net wide mr-4"> Nett </span>
+      <span class="dot gross wide mr-4"> Gross </span>
+      <span class="dot apv wide mr-4"> Average Purchase Value </span>
+      <span class="dot upt wide mr-4"> Unit per Transaction </span>
     </div>
   </div>
 </template>
